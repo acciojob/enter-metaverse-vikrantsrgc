@@ -1,18 +1,43 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Enter Metaverse</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    #enterBtn {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-	<p id="status">Enter the Metaverse</p>
-	<button id="enterBtn">Enter</button>
-    <script type="text/javascript" src="./script.js">
-</script>
+
+  <!-- Initial paragraph with ID 'status' -->
+  <p id="status">Enter the Metaverse</p>
+
+  <!-- Button with ID 'enterBtn' -->
+  <button id="enterBtn">Enter</button>
+
+  <script>
+    document.getElementById('enterBtn').addEventListener('click', function () {
+      // Get the existing <p> element
+      const statusElement = document.getElementById('status');
+
+      // Create new <h1> element
+      const newHeading = document.createElement('h1');
+      newHeading.textContent = 'Entered Metaverse';
+
+      // Replace <p> with <h1>
+      statusElement.replaceWith(newHeading);
+    });
+  </script>
 
 </body>
-
 </html>
