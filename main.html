@@ -2,42 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Enter Metaverse</title>
+  <title>enter-metaverse</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 100px;
+      padding: 20px;
     }
     #enterBtn {
       padding: 10px 20px;
-      font-size: 18px;
+      font-size: 16px;
       cursor: pointer;
-      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-
-  <!-- Initial paragraph with ID 'status' -->
+  <!-- Status Paragraph -->
   <p id="status">Enter the Metaverse</p>
 
-  <!-- Button with ID 'enterBtn' -->
+  <!-- Enter Button -->
   <button id="enterBtn">Enter</button>
 
-  <script>
-    document.getElementById('enterBtn').addEventListener('click', function () {
-      // Get the existing <p> element
-      const statusElement = document.getElementById('status');
-
-      // Create new <h1> element
-      const newHeading = document.createElement('h1');
-      newHeading.textContent = 'Entered Metaverse';
-
-      // Replace <p> with <h1>
-      statusElement.replaceWith(newHeading);
-    });
-  </script>
-
+  
 </body>
 </html>

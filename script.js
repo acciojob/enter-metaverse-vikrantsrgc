@@ -1,11 +1,17 @@
-// //your JS code here. If required.
-// let paraEle = document.getElementById("status");
-// let enterBtn = document.getElementById("enterBtn");
+    // Wait until DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      // Get references to elements
+      const statusPara = document.getElementById('status');
+      const enterButton = document.getElementById('enterBtn');
 
-// enterBtn.addEventListener("click",()=>{
-// 	// create a new h1 elemet 
-// 	const h1 = document.createElement("h1")
-// 	h1.textContent = "Entered Metaverse"
-	
-// 	paraEle.replaceWith(h1)
-// })
+      // Set up click event listener
+      enterButton.addEventListener('click', () => {
+        // Replace the paragraph with an <h1> tag containing new text
+        const heading = document.createElement('h1');
+        heading.textContent = 'Entered Metaverse';
+        heading.id = 'status'; // maintain the same ID for consistency
+
+        // Replace the old paragraph with the new heading
+        statusPara.replaceWith(heading);
+      });
+    });
