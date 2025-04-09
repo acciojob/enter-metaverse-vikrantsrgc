@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>enter-metaverse</title>
+  <title>Enter Metaverse</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -16,12 +16,23 @@
   </style>
 </head>
 <body>
-  <!-- Status Paragraph -->
   <p id="status">Enter the Metaverse</p>
-
-  <!-- Enter Button -->
   <button id="enterBtn">Enter</button>
 
-  
+  <script>
+    // Wait until DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      const statusPara = document.getElementById('status');
+      const enterButton = document.getElementById('enterBtn');
+
+      enterButton.addEventListener('click', () => {
+        const heading = document.createElement('h1');
+        heading.textContent = 'Entered Metaverse';
+        heading.id = 'status'; // maintain the same ID for consistency
+
+        statusPara.replaceWith(heading);
+      });
+    });
+  </script>
 </body>
 </html>
