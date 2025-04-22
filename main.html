@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Enter Metaverse</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    #enterBtn {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Metaverse</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        #status {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        #enterBtn {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <p id="status">Enter the Metaverse</p>
-  <button id="enterBtn">Enter</button>
 
-  <script>
-    // Wait until DOM is fully loaded
-    document.addEventListener('DOMContentLoaded', () => {
-      const statusPara = document.getElementById('status');
-      const enterButton = document.getElementById('enterBtn');
+    <p id="status">Enter the Metaverse</p>
+    <button id="enterBtn">Enter</button>
 
-      enterButton.addEventListener('click', () => {
-        const heading = document.createElement('h1');
-        heading.textContent = 'Entered Metaverse';
-        heading.id = 'statusHeading'; // maintain the same ID for consistency
+    <script>
+        // Get elements by their IDs
+        const statusParagraph = document.getElementById('status');
+        const enterButton = document.getElementById('enterBtn');
 
-        statusPara.replaceWith(heading);
-      });
-    });
-  </script>
+        // Add event listener to the button
+        enterButton.addEventListener('click', function() {
+            // Change the text content to "Entered Metaverse" inside an <h1> tag
+            statusParagraph.innerHTML = '<h1>Entered Metaverse</h1>';
+        });
+    </script>
+
 </body>
 </html>
